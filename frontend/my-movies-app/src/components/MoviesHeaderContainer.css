@@ -1,0 +1,18 @@
+.MoviesHeaderContainer{
+    margin: 60px 0px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.seeMore{
+    margin: auto 0;
+    display: inline-block; 
+    color: rgb(235, 39, 39);
+    text-decoration: none;
+    border-bottom: 1px solid rgb(209, 43, 43);
+    transition: 0.23s;
+}
+.seeMore:hover{
+    color: var(--navBackColor);
+    border-bottom: 1px solid var(--navBackColor);
+}

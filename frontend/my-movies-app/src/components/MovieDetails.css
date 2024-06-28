@@ -1,0 +1,128 @@
+/* Primary color: gray, Detail color: red */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.movie-details-container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-details-container h2 {
+    color: #333;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.movie-details-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.movie-details-container img:hover {
+    transform: scale(1.1);
+}
+
+.movie-details-container p {
+    color: #666;
+    margin: 10px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.movie-details-container p strong {
+    color: #f90707;
+    font-weight: bolder;
+}
+
+.movie-details-container p:hover {
+    color: #0c0505;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-spinner {
+    border: 8px solid #f0f0f0;
+    border-top: 8px solid red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.movie-details-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.movie-details-container:hover::before {
+    left: 100%;
+}
+
+.movie-details-container:hover h2 {
+    color: #e72330;
+}
+
+/* Styles for buttons */
+.movie-details-container button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.movie-details-container button:hover {
+    background-color: red;
+}
