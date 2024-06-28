@@ -10,7 +10,7 @@ const Signup = () => {
     const navigate =useNavigate();
     const handleSignup = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/signup', { username, password });
+            const response = await axios.post('https://movieinfo-qyuv.onrender.com/api/signup', { username, password });
             console.log(response.data);
             navigate("/login");
             // Handle success (redirect, show message, etc.)

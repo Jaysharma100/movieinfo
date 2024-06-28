@@ -11,14 +11,14 @@ export default function CategoryMovies (props){
             const getMovies = async ()=>{
                 const offset = Math.floor(Math.random() * (660));
                 if(props.type === "New Releases"){
-                    const {data} = await axios.get(`http://localhost:5000/api/movies?offset=${offset}&limit=4`);
+                    const {data} = await axios.get(`https://movieinfo-qyuv.onrender.com/api/movies?offset=${offset}&limit=4`);
                     if(data.success  === true){
                         const JSX =data.data.map(e=><MovieCard name={e.title} rating={e.rating} category={e.category} src={e.img} description={e.description}/>)
                         setMovies(JSX)
                     }
                 }
                 else{
-                    const {data} = await axios.get(`http://localhost:5000/api/movies/category/${props.type}?offset=${0}&limit=4`);
+                    const {data} = await axios.get(`https://movieinfo-qyuv.onrender.com/api/movies/category/${props.type}?offset=${0}&limit=4`);
                     if(data.success  === true){
                         const JSX =data.data.map(e=><MovieCard name={e.title} rating={e.rating} category={e.category} src={e.img} description={e.description}/>)
                         setMovies(JSX)

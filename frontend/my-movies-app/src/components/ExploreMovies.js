@@ -19,7 +19,7 @@ export default function ExploreMovies(){
     },[category])
     useEffect(()=>{
         const getMovies = async ()=>{
-            const {data} = await axios.get(`http://localhost:5000/api/movies/category/${category}?offset=${offset}&limit=${limit}`);
+            const {data} = await axios.get(`https://movieinfo-qyuv.onrender.com/api/movies/category/${category}?offset=${offset}&limit=${limit}`);
             if(data.success  === true){
                 const JSX =data.data.map(e=><MovieCard name={e.title} rating={e.rating} category={e.category} src={e.img} description={e.description}/>)
                 if(movies === null){setMovies(JSX)}

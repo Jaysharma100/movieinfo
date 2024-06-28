@@ -12,7 +12,7 @@ const Login = () => {
     const navigate= useNavigate();
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/login', { username, password });
+            const response = await axios.post('https://movieinfo-qyuv.onrender.com/api/login', { username, password });
             const { success, accessToken ,nameofuser} = response.data;
 
             if (success) {

@@ -11,7 +11,7 @@ export default function Explore() {
     useEffect( ()=>{
         const getCategory = async ()=>{
             const offset = Math.floor(Math.random() * (660));
-            const {data} = await axios.get(`http://localhost:5000/api/movies/category?categoryList`);
+            const {data} = await axios.get(`https://movieinfo-qyuv.onrender.com/api/movies/category?categoryList`);
             if(data.success  === true){
                 const JSX =data.data.map(e=><ExploreCard category={e}/>)
                 setCategory(JSX)

@@ -10,7 +10,7 @@ export default function FavoriteMovies({ username }) {
   useEffect(() => {
     const fetchFavorites = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/favorites/${username}`);
+        const response = await axios.get(`https://movieinfo-qyuv.onrender.com/api/favorites/${username}`);
         const { data } = response;
         if (data.success) {
           setFavorites(data.data);

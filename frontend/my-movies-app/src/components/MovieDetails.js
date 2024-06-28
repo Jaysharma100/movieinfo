@@ -40,7 +40,7 @@ export default function MovieDetails() {
         movieDetails: { title: decodedMovieName, img: Poster, description: Plot, category: Genre?.split(',')[0], rating: imdbRating }
       };
 
-      const response = await axios.post('http://localhost:5000/api/favorites/add', {
+      const response = await axios.post('https://movieinfo-qyuv.onrender.com/api/favorites/add', {
         username: username1,
         details: details,
       });
