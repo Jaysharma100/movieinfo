@@ -26,7 +26,7 @@ export default function CategoryMovies (props){
                 }
             }
             getMovies();
-            },[])
+            })
 
     
         

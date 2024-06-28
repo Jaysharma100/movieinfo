@@ -38,7 +38,7 @@ export default function ExploreMovies(){
 
         }
         getMovies();
-    },[showMore])
+    },[showMore,category,movies])
     return (
         <div className="Home">
         <SearchNav/>

@@ -22,11 +22,9 @@ export default function SearchNav() {
                     if (searchDisplayer.current) {
                         searchDisplayer.current.style.display = "none";
                     }
-                    scrollUp = currentScroll;
                     nav.current.style.height = "0vh";
                     nav.current.style.overflow = "hidden";
                 } else {
-                    scrollUp = currentScroll;
                     nav.current.style.height = "12vh";
                     nav.current.style.overflow = "";
                 }
@@ -35,7 +33,7 @@ export default function SearchNav() {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    });
 
     const handleSearch = async () => {
         setLoading(true);

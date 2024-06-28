@@ -3,7 +3,9 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Dashboard(props) {
-  const [list, list2, smallAside] = [useRef(), useRef(), useRef()];
+  const list=useRef();
+  const list2=useRef();
+  const smallAside=useRef();
 
   useEffect(() => {
     if (props.index !== undefined) {
@@ -24,7 +26,7 @@ export default function Dashboard(props) {
         });
       });
     }
-  }, []);
+  });
 
   return (
     <>

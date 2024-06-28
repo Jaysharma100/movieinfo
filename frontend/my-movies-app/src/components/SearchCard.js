@@ -10,7 +10,7 @@ export default function SearchCard(props){
     return(
     
         <div className="SearchCardContainer" onClick={navigateToMovieDetails}>
-            <img src={props.src} className="searchImg"/>
+            <img src={props.src} className="searchImg" alt=""/>
             <div>
             <h5>{props.name}</h5>
             <h6 className="searchCat">{props.category}</h6>

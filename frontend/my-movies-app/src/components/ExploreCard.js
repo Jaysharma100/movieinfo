@@ -32,18 +32,6 @@ export default function ExploreCard({ category }) {
                 <button
                     className="Catsbtn"
                     style={{ background: backgroundStyle }}
-                    onMouseEnter={() => {
-                        const homeElement = document.querySelector('.Home');
-                        homeElement.style.background = backgroundStyle;
-                        homeElement.style.opacity = '0.8';
-                        homeElement.style.filter = 'blur(5px)';
-                    }}
-                    onMouseLeave={() => {
-                        const homeElement = document.querySelector('.Home');
-                        homeElement.style.background = '';
-                        homeElement.style.opacity = '';
-                        homeElement.style.filter = '';
-                    }}
                 >
                     <h3>{category}</h3>
                 </button>
